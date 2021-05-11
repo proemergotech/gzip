@@ -36,6 +36,11 @@ func Response(logger log.Logger) plugin.Plugin {
 			return
 		}
 
+		if gCtx.Response == nil || gCtx.Response.Body == nil || gCtx.Response.Body == http.NoBody || gCtx.Response.ContentLength <= 0 {
+			h.Next(gCtx)
+			return
+		}
+
 		var buf bytes.Buffer
 		gzr, err := cgzip.NewReader(gCtx.Response.Body)
 		if err != nil {
@@ -71,7 +76,6 @@ func Request(logger log.Logger) plugin.Plugin {
 	return plugin.NewRequestPlugin(func(gCtx *gcontext.Context, h gcontext.Handler) {
 
 		if gCtx.Request == nil || gCtx.Request.Method == "GET" || gCtx.Request.Body == nil || gCtx.Request.Body == http.NoBody || gCtx.Request.ContentLength <= 0 {
-			logger.Debug(gCtx, "calling next because no need to compress")
 			h.Next(gCtx)
 			return
 		}
