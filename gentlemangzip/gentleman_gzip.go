@@ -36,7 +36,7 @@ func Response(logger log.Logger) plugin.Plugin {
 			return
 		}
 
-		if gCtx.Response == nil || gCtx.Response.Body == nil || gCtx.Response.Body == http.NoBody || gCtx.Response.ContentLength <= 0 {
+		if gCtx.Response == nil || gCtx.Response.Body == nil || gCtx.Response.Body == http.NoBody || gCtx.Response.ContentLength == 0 {
 			h.Next(gCtx)
 			return
 		}
@@ -75,7 +75,7 @@ func Response(logger log.Logger) plugin.Plugin {
 func Request(logger log.Logger) plugin.Plugin {
 	return plugin.NewRequestPlugin(func(gCtx *gcontext.Context, h gcontext.Handler) {
 
-		if gCtx.Request == nil || gCtx.Request.Method == "GET" || gCtx.Request.Body == nil || gCtx.Request.Body == http.NoBody || gCtx.Request.ContentLength <= 0 {
+		if gCtx.Request == nil || gCtx.Request.Method == "GET" || gCtx.Request.Body == nil || gCtx.Request.Body == http.NoBody || gCtx.Request.ContentLength == 0 {
 			h.Next(gCtx)
 			return
 		}
