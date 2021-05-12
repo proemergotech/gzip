@@ -1,5 +1,8 @@
 # Release Notes
 
+## 1.0.2 / 2021-05-12
+- content-length -1 doesn't mean there is no body
+
 ## 1.0.1 / 2021-05-11
 - do not try to decompress empty body
 

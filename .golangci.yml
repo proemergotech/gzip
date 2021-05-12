@@ -20,6 +20,7 @@ linters:
   enable:
     - deadcode
     - errcheck
+    - exportloopref
     - goconst
     - goimports
     - golint
@@ -27,7 +28,6 @@ linters:
     - govet
     - ineffassign
     - prealloc
-    - scopelint
     - staticcheck
     - structcheck
     - typecheck
