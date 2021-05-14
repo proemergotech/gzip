@@ -1,5 +1,10 @@
 # Release Notes
 
+## 1.1.0 / 2021-05-14
+- remove debug log
+- remove response middleware
+- update to go v1.16
+
 ## 1.0.2 / 2021-05-12
 - content-length -1 doesn't mean there is no body
 
