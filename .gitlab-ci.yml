@@ -17,6 +17,6 @@ verify:
 
 build:
   stage: build
-  image: golang:1.15
+  image: golang:1.16
   script:
     - go build -a -mod=readonly -o /dev/null ./...
