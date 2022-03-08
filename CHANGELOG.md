@@ -1,5 +1,8 @@
 # Release Notes
 
+## 1.2.0 / 2022-03-08
+- update to go v1.17
+
 ## 1.1.0 / 2021-05-14
 - remove debug log
 - remove response middleware

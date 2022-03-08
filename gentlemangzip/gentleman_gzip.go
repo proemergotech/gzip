@@ -7,7 +7,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"gitlab.com/proemergotech/log-go/v3"
+	"github.com/proemergotech/log/v3"
 
 	gcontext "gopkg.in/h2non/gentleman.v2/context"
 	"gopkg.in/h2non/gentleman.v2/plugin"

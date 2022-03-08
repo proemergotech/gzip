@@ -1,10 +1,8 @@
-module gitlab.com/proemergotech/gzip
+module github.com/proemergotech/gzip
 
-go 1.16
+go 1.17
 
 require (
-	github.com/labstack/echo/v4 v4.2.2
-	gitlab.com/proemergotech/errors v1.0.0
-	gitlab.com/proemergotech/log-go/v3 v3.0.3
+	github.com/proemergotech/log/v3 v3.1.0
 	gopkg.in/h2non/gentleman.v2 v2.0.4
 )
